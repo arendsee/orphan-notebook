@@ -1,0 +1,32 @@
+\section{Observations from my data}
+
+\begin{enumerate}
+\item There are about 700,000 non-genic ORFs
+
+% ngORF, orphan, non-orphan comp table
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|}
+    \hline
+    {} & \multicolumn{1}{c|}{Protein Length} & \multicolumn{1}{c|}{GC Percent}\\ 
+    {} & (min, 25\%, \textbf{median}, 75\%, max) & (min, 25\%, \textbf{median}, 75\%, max) \\
+    \hline
+    ngORF & (10, 13, \textbf{19}, 29, 463) & (0.0152, 0.278, \textbf{0.322}, 0.368, 0.756) \\ 
+    Orphan & (16, 43, \textbf{57}, 89, 1220) & (0.248, 0.396, \textbf{0.431}, 0.465, 0.69) \\ 
+    Non-Orphan & (24, 214, \textbf{356}, 528, 5390) & (0.282, 0.423, \textbf{0.441}, 0.463, 0.657) \\ 
+    \hline
+\end{tabular}
+\end{table}
+
+There are 8,249 ngORFs (about 0.011\%) that have both lengths and GC\% within
+the mid-50\% range of the orphan genes. Most likely, the de novo orphans
+originate from such ORFs. There may be orphan nursuries, high GC islands, in
+which orphan genes frequently appear. 
+
+Orphans are a little \textbf{less} structured than ngORFs. All the trends I
+have tested agree with those of Carvunis \cite{carvunis_proto-genes_2012} and
+others. Orphans are likely just as important in plants as they have been
+demonstrated to be in metazoans and yeast.
+
+\end{enumerate}
+

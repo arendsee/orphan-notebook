@@ -1,0 +1,50 @@
+\section{Case studies}
+
+\subsection{False orphans}
+
+\subsubsection{AT3G53370.2 - splicing artifact}
+
+AT3G53370.2 is classified as an orphan according to blastp (threshold 1e-5).
+However the model AT3G53370.1 is classified as Embryophyta-specific.
+
+\begin{verbatim}
+ >AT3G53370.2
+ MDGEDFAG                                        KNLPPRKKKPVSKKKLKREKLKQGVPVPGE
+ >AT3G53370.1
+ MDGEDFAG KAAAEAKGLNPGLIVLLVVGGPLLVFLIANYVLYVYAQ KNLPPRKKKPVSKKKLKREKLKQGVPVPGE
+\end{verbatim}
+
+HMM-based methods are sensative enough to detect the similarity, however.
+HHBlits and HMMER easily detect its similarity to other S1FA DNA binding
+domains.
+
+\subsection{Orphan gene families}
+
+\subsubsection{Panther: PTHR31420}
+
+Also pfam-domain DUF3287
+
+\begin{verbatim}
+ model         pfam-A  pfam-B  stratum
+ AT3G32150.1   0       0       21     
+ AT3G32190.1   1       0       21     
+ AT3G33293.1   0       0       21     
+ AT4G06583.1   0       1       21     
+ AT4G07932.1   0       1       21     
+ AT4G08097.1   0       0       21     
+ AT5G35603.3   0       1       21     
+ AT5G33898.1   0       1       21     
+ AT3G30220.1   0       1       20     
+ AT3G32160.1   0       1       20     
+ AT3G32180.1   0       1       20     
+ AT4G06583.2   0       1       20     
+ AT4G07740.1   0       1       20     
+ AT5G35603.1   0       1       20     
+ AT5G35603.2   0       1       20     
+ AT2G11010.1   0       1       18     
+ AT3G30230.1   0       0       18     
+ AT3G43148.1   1       0       18     
+ AT4G06688.1   0       0       18     
+ AT3G43150.1   0       1       14     
+ AT5G32590.1   1       0       11     
+\end{verbatim}

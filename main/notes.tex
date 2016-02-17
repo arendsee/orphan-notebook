@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.3ex plus 0.5ex minus 0.3ex}
+
+\usepackage{wrapfig}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\newcommand*{\secpath}{../sections}
+\newcommand{\cfig}[3]{
+  \begin{figure}[h!]
+    \centering
+      \includegraphics[#1]{#2}
+      \caption{#3}
+  \end{figure}
+  \FloatBarrier
+}
+\graphicspath{{../images/}}
+
+\title{Orphan Notes}
+\author{Zebulun Arendsee}
+\date{\today}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\listoffigures
+
+\input{\secpath/definitions}
+\input{\secpath/number}
+\input{\secpath/origin}
+\input{\secpath/maturation}
+\input{\secpath/functions}
+\input{\secpath/identification}
+\input{\secpath/regulation}
+\input{\secpath/clade-specific-factors}
+\input{\secpath/clues}
+
+\input{\secpath/review}
+\input{\secpath/papers}
+\input{\secpath/plant-papers}
+\input{\secpath/genome-projects}
+\input{\secpath/methods}
+
+\input{\secpath/my-data}
+
+\input{\secpath/case-studies}
+
+\input{\secpath/other}
+\input{\secpath/appendix}
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{bibsty}
+\bibliography{refs}
+
+\end{document}
