@@ -7,7 +7,6 @@
 \usepackage{wrapfig}
 \usepackage{fullpage}
 \usepackage{graphicx}
-\usepackage{placeins}
 \usepackage{color}
 \usepackage{hyperref}
 \hypersetup{
@@ -17,6 +16,19 @@
     linkcolor=blue,
     urlcolor=blue
 }
+
+
+% Prevent floats from crossing section or subsection boundaries
+\usepackage[section]{placeins}
+% Credit for this voodoo goes to Heiko Oberdiek
+\makeatletter
+\AtBeginDocument{%
+  \expandafter\renewcommand\expandafter\subsection\expandafter{%
+    \expandafter\@fb@secFB\subsection
+  }%
+}
+\makeatother
+
 
 \def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
   \hbox{}\nobreak\hfil(#1)%
@@ -28,14 +40,15 @@
 
 
 \newcommand*{\secpath}{../sections}
+
 \newcommand{\cfig}[3]{
   \begin{figure}[h!]
     \centering
       \includegraphics[#1]{#2}
       \caption{#3}
   \end{figure}
-  \FloatBarrier
 }
+
 \graphicspath{{../images/}}
 
 \title{Orphan Notes}
