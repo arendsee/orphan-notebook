@@ -18,6 +18,15 @@
     urlcolor=blue
 }
 
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
+
 \newcommand*{\secpath}{../sections}
 \newcommand{\cfig}[3]{
   \begin{figure}[h!]
@@ -42,6 +51,7 @@
 \input{\secpath/number}
 \input{\secpath/origin}
 \input{\secpath/maturation}
+\input{\secpath/models}
 \input{\secpath/functions}
 \input{\secpath/identification}
 \input{\secpath/regulation}
@@ -63,6 +73,6 @@
 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{bibsty}
-\bibliography{refs}
+\bibliography{notes}
 
 \end{document}
