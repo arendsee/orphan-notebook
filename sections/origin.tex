@@ -9,6 +9,125 @@ is to recombine", pp. 3
 exists, either transforming a system to give it new functions or combining
 several systems to produce a more elaborate one." pp. 4
 
+\subsection{Mechanism}
+
+The rise of a functional, novel gene through a de novo route is surely an
+unlikely event and requires three steps: transcription, translation, and
+functionalization. The order of these steps is by no means obvious.
+
+\subsubsection{Theory}
+
+Two main theories for orphan gene evolution are the continuum and
+pre-adaptation theories. Carvunis developed the continuum model
+\cite{carvunis_proto-genes_2012}, which describes orphans on a continuum from
+random sequence, to proto-gene, to orphan gene, to established gene. The
+pre-adaptation model assumes that the barrier to entry is extremely high, such
+that only a small subset of genes will become functional. In order to enter the
+cycle, they have to have chance properties that prevent them from being toxic.
+Specifically, they need have a high intrinsically disordered structure, which
+prevents amyloids from forming. This latter model was supported by a study in
+mice and yeast \cite{wilson2017young}.
+
+\subsubsection{Transcription}
+
+The first hurdle, at least conceptually, to the rise of a new gene is attaining
+transcription.
+
+Techniques for expression analysis, specifically RNA-seq, are extremely
+sensitive. There is extensive evidence that transcription is very widespread.
+
+A recent paper from Alba's lab \cite{ruiz2018translation} studied this problem.
+Their paper is behind a paywall, and I don't even know what species they were
+working with. But they used deep ribosome footprinting and some evolutionary
+methods to conclude that translation is common in RNAs thought to be non-coding
+and that the majority of the ORFs are under neutral evolution.
+
+
+There are a few general paths to gaining transcription. 
+
+{\bf Hijack an old gene's transcriptional machinery}. There are a couple ways
+an orphan could do this. 1) They could be small ORFs on the mRNA that do not
+overlap the primary gene; 2) they could be over-printed, i.e. have an
+overlapping ORF in a different frame; 3) they could be ORFs on a functional
+non-coding RNA.
+
+{\bf Replace an old gene}. They could completely replace an old gene while
+preserving the transcriptional machinery. There are a couple possibilities
+here: 1) they could be a frame-shifted old gene; 2) they could evolve from a
+pseudogene; 3) they could derive from a deleted CDS. 
+
+{\bf Animated random ORF}. They could be animated by the insertion of a
+upstream promoter. The most likely case would be the insertion of an upstream
+transposon.  
+
+{\bf Bidirectional transcription}. The de novo theory of origin through
+divergent transcription is presented in detail by Wu in \cite{wu2013divergent}.
+I haven't carefully read the paper yet ...
+
+\cfig{width=.5\textwidth}{wu2013divergent_fig1}{The majority of mammalian
+promoters to not have a TATA-box, and without it they transcribe in either
+direction. {\it (A) Transcription factor (TF) binding helps to recruit
+TATA-binding protein (TBP) and associated factors, which binds the directional
+TATA element in the DNA and orientates RNA Pol II to transcribe downstream DNA.
+(B) In the absence of strong TATA elements common of CpG island promoters,
+TF-recruited TBP and associated factors binds to low specificity sequences and
+forms initiation complexes at similar frequencies in both directions}.
+\cite{wu2013divergent}}
+
+{\bf chance promoter}. They could gain a promoter by chance. This specific case
+can be recognized through the simplicity of the promoter. A chance promoter
+should contain mostly very simple motifs. 
+
+
+\subsubsection{Translation}
+
+Translation is much harder to assess than transcription. The most
+high-throughput method is ribosome footprinting. 
+
+
+\subsubsection{Functionalization}
+
+Testing for funtionallity of the gene is even harder than testing translation.
+
+How likely is it that a random protein would be beneficial? Or are they highly
+toxic? These are vital questions that need to be more thoroughly studied.
+
+Random gene libraries have been used in vivo as a raw source of variation to
+evolve novel functions that help E. coli deal with stress
+\cite{stepanov2007stress}. This study used 20-mer peptides random libraries and
+evolved NiCl2 resistance peptides.
+
+There is evidence that random expression of 65-aa genes in E. coli are actually
+quite likely to be beneficial (up to 25\% of clones increase growth rate, and
+up to 52\% decrease it) \cite{neme2017random}. This study did not test for
+translation of the random sequences, so the effect could be due to just the
+transcription. However, they did compare 3 of the beneficial plasmids to the
+same plasmid with a early stop insertion: 1 out of 3 showed a change, with the
+STOP insertion killing the benefit. This suggests that both the RNA and the
+peptide can be beneficial, but is too small of a sample to make a reasonable
+estimate of the proportions. 
+
+\cfig{width=\textwidth}{neme2017random-fig1}{{\it Induction of expression
+through IPTG drives changes in clone frequency over time.  A) with IPTG, B)
+without IPTG. Plots of fold-change (compared to the first cycle) versus mean
+counts across pairwise comparisons. Negative fold changes are indicative of
+depletion compared to the first cycle, and positive fold changes are indicative
+of enrichment compared to the first cycle. Left, center and right panels
+indicate comparisons with the 2nd, 3rd and 4th cycle (24 hours per cycle).
+Green and red dots indicate clones with significant fold changes (5\% FDR),
+positive and negative, respectively. Black crosses indicate clones with
+non-significant fold changes. The number in the lower-right corner of each plot
+indicates the total number of clones with significant changes (out of 1082).
+Both experiments were derived from the same stock culture, and performed
+simultaneously. We observe that the induction has a clear effect on the
+dynamics of competition and differentiation along the experiment.}
+\cite{wu2013divergent}}
+
+One theory for the evolution of functional de novo proteins is that they are
+constructed through repeat expansion. It was observed that in mammalian
+lineages older proteins have less low-complexity content than younger proteins
+\cite{toll2011complexity}.
+
 \subsection{Papers}
 
 \subsubsection{Ruiz-Orera (2015) Origins of de novo genes in human and chimpanzee}
