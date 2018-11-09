@@ -1,5 +1,20 @@
 \section{Tools}
 
+\subsection{Genome Alignment}
+
+\subsubsection{Satsuma}
+
+The Satsuma genome alignment tool: \cite{grabherr2010genome}. Based on 3 ideas:
+1) \textbf{cross-correlation}, a FFT algorithm borrowed from audio-processing,
+to find sequence matches, 2) battleship algorithm for perforance, 3) synteny
+filter.
+
+\subsubsection{MUMmer4}
+
+The MUMmer4 genome alignment tool: \cite{marccais2018mummer4}.
+
+\textbf{Method}: suffix-tree
+
 \subsection{BLAST}
 
 \subsection{HMMBlits}
@@ -9,18 +24,19 @@
 \subsection{RepeatMasker}
 
 \subsection{bedtools}
-    Tool for genome arithmetic and set analyses.
 
-    \url{http://bedtools.readthedocs.org/en/latest/}
+  Tool for genome arithmetic and set analyses.
+
+  \url{http://bedtools.readthedocs.org/en/latest/}
 
 \subsection{Genome simulation}
 
-Two recent studies on the power of BLAST were based on gene simulations
-\cite{moyers_phylostratigraphic_2015,moyers_evaluating_2016}, however these
-simulated genes alone. If gene context is included, more sophisticated methods
-are required.
+  Two recent studies on the power of BLAST were based on gene simulations
+  \cite{moyers_phylostratigraphic_2015,moyers_evaluating_2016}, however these
+  simulated genes alone. If gene context is included, more sophisticated
+  methods are required.
 
-A very cool class of simulators are the phylo-grammar based programs built by
-Ian Holmes \cite{klosterman_xrate:_2006}. 
+  A very cool class of simulators are the phylo-grammar based programs built by
+  Ian Holmes \cite{klosterman_xrate:_2006}. 
 
-This approach was further developed \cite{westesson_developing_2012}.
+  This approach was further developed \cite{westesson_developing_2012}.

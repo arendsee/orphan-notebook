@@ -1,8 +1,4 @@
-.PHONY: notes.pdf clean
-
-all: notes.pdf
-
-notes.pdf:
+all:
 	latexmk --pdf --bibtex notes.tex
 
 clean:
