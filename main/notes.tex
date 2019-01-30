@@ -4,6 +4,17 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1.3ex plus 0.5ex minus 0.3ex}
 
+% set up quote environment
+% see stackexchange #13756
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+% -----------------------
+
 \usepackage{wrapfig}
 \usepackage{fullpage}
 \usepackage{graphicx}
@@ -30,15 +41,6 @@
 \makeatother
 
 \newcommand{\about}{\char`\~}
-
-\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
-  \hbox{}\nobreak\hfil(#1)%
-  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
-\newsavebox\mybox
-\newenvironment{aquote}[1]
-  {\savebox\mybox{#1}\begin{quote}}
-  {\signed{\usebox\mybox}\end{quote}}
-
 
 \newcommand*{\secpath}{../sections}
 
@@ -81,6 +83,9 @@
 \input{\secpath/my-data}
 
 \input{\secpath/case-studies}
+
+% mini reports
+\input{\secpath/isochores}
 
 \input{\secpath/other}
 \input{\secpath/appendix}

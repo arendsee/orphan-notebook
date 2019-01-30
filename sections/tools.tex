@@ -46,6 +46,26 @@ interfaces, e.g. SimpleSynteny \cite{veltri2016simplesynteny}, Synteny Portal
 
 \subsection{BLAST}
 
+The original, most cited, paper on BLAST is \cite{altschul1990basic} and is
+based on the statistics described previously by Karlin and Altschul
+\cite{karlin1990methods}. However, the algorithms side of the tool that seeds
+the searches is not covered in detail in the main papers, but is discussed in
+depth by the author of the method here \cite{myers2013s}.
+
+BLAST statistics \cite{karlin1990methods} are based on the assumption that the
+query and database have randomly ordered characters.
+
+If the query and the database have similar true evolutionary models (thus
+similar true composition) then they will have more non-homologous similarity
+than BLAST expects. Thus when BLAST sees a high score, it may assign it an
+unrealistically high level of significance.
+
+The way BLAST deals with deviation from the uniform random model is with
+masking heuristics. There are two approaches to masking, 1) soft masking, where
+overly common words cannot be used as seeds but where alignments to masked
+regions still counts, and 2) hard masking where alignments to masked regions
+does not contribute to score.
+
 \subsection{HMMBlits}
 
 \subsection{GeneWise}
